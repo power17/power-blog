@@ -105,7 +105,9 @@ public class Lesson12_1 {
 
   // 查询前缀树的函数
   public String lookup(String word) {
+
     return lookupAWord(word, root);
+
   }
 
   public static void main(String[] args) {
@@ -113,7 +115,6 @@ public class Lesson12_1 {
     Lesson12_1 l12_1 = new Lesson12_1();
     String[] words = { "zoo", "geometry", "bat", "boy", "geek", "address", "zebra" }; // 模拟字典
     l12_1.buildPrefixTree(words);
-    // System.out.println(l12_1.buildPrefixTree(words));
 
     System.out.println(l12_1.lookup("bo")); // 测试不存在的词（情况一）
     System.out.println(l12_1.lookup("battle")); // 测试不存在的词（情况二）
