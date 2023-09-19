@@ -22,7 +22,6 @@ public class Lesson1 {
         nums[j + 1] = tem;
       }
     }
-    return nums;
 
     // for (int i = 0; i < ns.length - 1; i++) {
 
