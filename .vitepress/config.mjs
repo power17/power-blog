@@ -31,8 +31,7 @@ export default defineConfig((config) => {
         {
           text: '算法',
           items: [
-            { text: '排序', link: '/algorithm/Array'},
-            { text: '链表', link: '/algorithm/LinkedList' }
+            { text: '排序', link: '/algorithm/Sort'},
           ]
         }
       ],

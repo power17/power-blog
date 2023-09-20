@@ -1,1 +1,1 @@
-- 博客地址：https://power17.github.io/power-learn/
+- 博客地址：https://power17.github.io/power-blog/
