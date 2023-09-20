@@ -27,6 +27,7 @@ public class Client {
     var writer = new BufferedWriter(new OutputStreamWriter(output, StandardCharsets.UTF_8));
     var reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));
     Scanner scanner = new Scanner(System.in);
+    System.out.println(scanner);
     System.out.println("[server] " + reader.readLine());
     for (;;) {
       System.out.print(">>> "); // 打印提示
