@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: 权王
-  text: '记录技术的点点滴滴'
+  text: '取乎其上，得乎其中；取乎其中，得乎其下；取乎其下，则无所得'
   tagline: 凡心所向，素履所往，生如逆旅，一苇以航
   actions:
     - theme: brand

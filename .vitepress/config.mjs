@@ -4,7 +4,7 @@ export default defineConfig((config) => {
   let base = config.mode === 'development' ? '/' : '/power-blog' 
 
   return {
-    title: "power的博客",
+    title: "落世权王",
     description: "记录技术的点点滴滴",
     srcDir: 'src',
     lastUpdated: true,
