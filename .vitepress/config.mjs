@@ -6,6 +6,8 @@ export default defineConfig({
   description: "记录技术的点点滴滴",
   srcDir: 'src',
   lastUpdated: true,
+  base: "https://power17.github.io/power-learn/",
+  
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
