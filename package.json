@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vitepress dev",
-    "build": "vitepress build",
+    "dev": "vitepress dev --mode dev",
+    "build": "vitepress build --mode production",
     "preview": "vitepress preview"
   },
   "keywords": [],
