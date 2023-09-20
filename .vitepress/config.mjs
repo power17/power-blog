@@ -5,6 +5,7 @@ export default defineConfig({
   title: "power的博客",
   description: "记录技术的点点滴滴",
   srcDir: 'src',
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
