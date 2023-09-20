@@ -6,14 +6,22 @@ export default defineConfig((config) => {
   return {
     title: "落世权王",
     description: "记录技术的点点滴滴",
+    head: [
+      // 图标配置
+      ['link', { rel: 'icon', href: '/logo.png' }],
+    ],
     srcDir: 'src',
     lastUpdated: true,
     base: base,
-    
     themeConfig: {
-     
+      externalLinkIcon: true,
+      logo: '/logo.png',
+      search: {
+        provider: 'local'
+      },
       // https://vitepress.dev/reference/default-theme-config
       nav: [
+        
         { text: '首页', link: '/' },
         { text: '前端', link: '/algorithm/Array' },
         { text: '算法', link: '/algorithm/Array' }
