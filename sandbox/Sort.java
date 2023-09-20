@@ -1,12 +1,5 @@
-## 排序
-
-冒泡排序： 左右指针，右指针不断-1 重复直到 0
-
-- 网上大部分都是双循环，用 i、j 表示不容易读。其实冒泡排序其实是右指针往回移动，每次左指针跑一遍将最大的排在最后面，
-
-```java
-// java
 package sandbox;
+
 import java.util.Arrays;
 
 // java
@@ -33,6 +26,7 @@ class Sort {
       }
     }
     return nums;
+
   }
+
 }
-```
