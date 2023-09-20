@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 18
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
 
       - name: Build
         run: pnpm docs:build
@@ -27,6 +27,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           publish_dir: docs/.vitepress/dist
           # cname: example.com # if wanna deploy to custom domain
