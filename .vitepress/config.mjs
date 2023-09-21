@@ -8,7 +8,7 @@ export default defineConfig((config) => {
     description: "记录技术的点点滴滴",
     head: [
       // 图标配置
-      ['link', { rel: 'icon', href: '/logo.png' }],
+      ['link', { rel: 'icon',type:"image/x-icon", href: '/assets/logo.svg' }],
       // [
       //   'script',
       //   {
@@ -25,7 +25,7 @@ export default defineConfig((config) => {
     base: base,
     themeConfig: {
       // externalLinkIcon: true,
-      logo: '/logo.png',
+      logo: '/assets/logo.png',
       search: {
         provider: 'local'
       },

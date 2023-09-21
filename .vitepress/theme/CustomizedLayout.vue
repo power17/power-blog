@@ -7,7 +7,7 @@ import { onMounted, watch, nextTick, computed, ref } from 'vue';
 const { Layout } = DefaultTheme;
 const vpData = useData();
 const route = useRoute();
-console.log(vpData, route);
+
 onMounted(() => {
   nextTick(() => {
     initWaline();
