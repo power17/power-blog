@@ -49,7 +49,7 @@ export default defineConfig((config) => {
           {
             text: '前端',
             items: [
-              { text: 'vite源码', link: '/algorithm/Vite' },
+              { text: 'vite源码', link: '/frontend/Vite' },
              
             ]
           },
