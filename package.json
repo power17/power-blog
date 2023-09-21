@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev --mode dev",
-    "test": "vitepress dev --mode test",
+    "test": "vitepress build --mode test",
     "build": "vitepress build --mode production",
     "preview": "vitepress preview"
   },
