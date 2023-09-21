@@ -3,6 +3,7 @@ import DefaultTheme from 'vitepress/theme';
 import { init } from '@waline/client';
 import { useData, useRoute } from 'vitepress';
 import { onMounted, watch, nextTick, computed, ref } from 'vue';
+
 const { Layout } = DefaultTheme;
 const vpData = useData();
 const route = useRoute();
