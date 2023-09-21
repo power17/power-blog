@@ -1,4 +1,14 @@
-- 链表
+---
+title: 链表
+author: power
+description: '链表通过指针将一组零散的内存块串联在一起。其中，我们把内存块称为链表的“结点”。'
+date: 2023-09-21 10:58:00
+link: ./algorithm/Array
+tags:
+  - 数据结构
+---
+
+{{ $frontmatter.description }}
 
 ```js
 /**
