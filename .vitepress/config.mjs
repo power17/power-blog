@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig((config) => {
-  let base = config.mode === 'test' ? '/power-learn' : '/' 
+  let base = process.env.BUILD_TYPE === 'git' ? '/power-learn' : '/' 
 
   return {
     title: "疯世权王",
