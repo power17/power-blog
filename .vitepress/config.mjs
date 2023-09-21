@@ -25,26 +25,41 @@ export default defineConfig((config) => {
       nav: [
         
         { text: '首页', link: '/' },
-        { text: '前端', link: '/algorithm/Array' },
-        { text: '算法', link: '/algorithm/Array' }
+        { text: '前端', link: '/frontend/Vite' },
+        { text: '算法', link: '/algorithm/Array'}
        
       ],
+       sidebar: {
+        '/algorithm/': [
+          {
+            text: '数据结构',
+            items: [
+              { text: '数组', link: '/algorithm/Array' },
+              { text: '链表', link: '/algorithm/LinkedList' }
+            ]
+          },
+          {
+            text: '算法',
+            items: [
+              { text: '排序', link: '/algorithm/Sort'},
+            ]
+          }
+        ],
+        '/frontend/': [
+          {
+            text: '前端',
+            items: [
+              { text: 'vite源码', link: '/algorithm/Vite' },
+             
+            ]
+          },
+          {
+            
+          }
+        ]  
+       }, 
   
-      sidebar: [
-        {
-          text: '数据结构',
-          items: [
-            { text: '数组', link: '/algorithm/Array' },
-            { text: '链表', link: '/algorithm/LinkedList' }
-          ]
-        },
-        {
-          text: '算法',
-          items: [
-            { text: '排序', link: '/algorithm/Sort'},
-          ]
-        }
-      ],
+      
   
       socialLinks: [
         { icon: 'github', link: 'https://github.com/power17/power-learn' }
