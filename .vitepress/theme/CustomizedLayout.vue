@@ -25,8 +25,8 @@ async function initWaline() {
   if (walineElem) {
     walineInstance = init({
       el: '#waline',
-      serverURL: 'https://mafumia7.api.lncldglobal.com',
-      // serverURL: 'https://www.power17.xyz',
+      // serverURL: 'https://mafumia7.api.lncldglobal.com',
+      serverURL: 'https://www.power17.xyz',
       dark: vpData.isDark.value,
       locale: {
         // placeholder: await (await fetch('https://v1.jinrishici.com/rensheng.txt')).text(),
