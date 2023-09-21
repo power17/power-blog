@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 最新文章
-      link: ./algorithm/Array
+      link: ./latestArticles
     - theme: alt
       text: 简介
       link: /about

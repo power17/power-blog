@@ -4,17 +4,19 @@ export default defineConfig((config) => {
   let base = config.mode === 'development' ? '/' : '/power-blog' 
 
   return {
-    title: "落世权王",
+    title: "疯世权王",
     description: "记录技术的点点滴滴",
     head: [
       // 图标配置
       ['link', { rel: 'icon', href: '/logo.png' }],
     ],
     srcDir: 'src',
-    lastUpdated: true,
+    lastUpdated: {
+      text: '最后更新时间', 
+    },
     base: base,
     themeConfig: {
-      externalLinkIcon: true,
+      // externalLinkIcon: true,
       logo: '/logo.png',
       search: {
         provider: 'local'

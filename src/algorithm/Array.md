@@ -1,3 +1,9 @@
+---
+title: 数组
+author: power
+timer: 2023-09-21 09:52:51
+---
+
 ## 数组
 
 与 Java 、PHP 等语言不同，在 JavaScript 中，数组其实是一种特殊的对象。

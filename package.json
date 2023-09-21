@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev --mode dev",
@@ -16,6 +17,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "sass": "^1.68.0",
     "vitepress": "1.0.0-rc.14"
   }
 }
