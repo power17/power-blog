@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig((config) => {
-  let base = config.mode === 'development' ? '/' : '/power-blog' 
+  let base = config.mode === 'development' ? '/' : '/' 
 
   return {
     title: "疯世权王",

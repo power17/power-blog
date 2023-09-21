@@ -1,1 +1,3 @@
 - 博客地址：https://power17.github.io/power-blog/
+- 网站托管：Vercel
+- 数据存储：LeanCloud

@@ -33,5 +33,5 @@ const posts = createContentLoader('src/**/*.md', {
     })
   }
 })
-// console.log(posts)
+
 export default posts
