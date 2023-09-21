@@ -24,8 +24,8 @@ async function initWaline() {
   if (walineElem) {
     walineInstance = init({
       el: '#waline',
-      serverURL: 'power-blog-power17.vercel.app',
-      // serverURL: 'https://www.power17.xyz',
+      // serverURL: 'power-blog-power17.vercel.app',
+      serverURL: 'https://www.power17.xyz',
       dark: vpData.isDark.value,
       locale: {
         // placeholder: await (await fetch('https://v1.jinrishici.com/rensheng.txt')).text(),
