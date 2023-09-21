@@ -9,6 +9,14 @@ export default defineConfig((config) => {
     head: [
       // 图标配置
       ['link', { rel: 'icon', href: '/logo.png' }],
+      // [
+      //   'script',
+      //   {
+      //     src: '//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js',
+         
+      //     defer: '',
+      //   },
+      // ],
     ],
     srcDir: 'src',
     lastUpdated: {

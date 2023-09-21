@@ -17,6 +17,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@waline/client": "^2.15.8",
     "sass": "^1.68.0",
     "vitepress": "1.0.0-rc.14"
   }
