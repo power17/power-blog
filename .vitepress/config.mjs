@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-// https://vitepress.dev/reference/site-config
 export default defineConfig((config) => {
   let base = process.env.BUILD_TYPE === 'git' ? '/power-blog' : '/' 
 
@@ -9,14 +8,7 @@ export default defineConfig((config) => {
     head: [
       // 图标配置
       ['link', { rel: 'icon',type:"image/x-icon", href: '/logo.svg' }],
-      // [
-      //   'script',
-      //   {
-      //     src: '//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js',
-         
-      //     defer: '',
-      //   },
-      // ],
+   
     ],
     srcDir: 'src',
   
@@ -30,12 +22,12 @@ export default defineConfig((config) => {
       search: {
         provider: 'local'
       },
-      // https://vitepress.dev/reference/default-theme-config
       nav: [
         
         { text: '首页', link: '/' },
         { text: '前端', link: '/frontend/Vite' },
-        { text: '算法', link: '/algorithm/Array'}
+        { text: '算法', link: '/algorithm/Array'},
+        { text: '数据库', link: '/databases/Mysql'},
        
       ],
        sidebar: {
@@ -65,7 +57,16 @@ export default defineConfig((config) => {
           {
             
           }
-        ]  
+        ],  
+        '/database/': [
+          {
+            text: '数据库',
+            items: [
+              { text: 'mysql操作', link: '/databases/Mysql' },
+             
+            ]
+          },
+        ]
        }, 
   
       
