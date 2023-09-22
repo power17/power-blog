@@ -32,8 +32,9 @@ async function initWaline() {
         // placeholder: await (await fetch('https://v1.jinrishici.com/rensheng.txt')).text(),
         sofa: '空空如也。',
       },
-      pageview: true,
-      comment: true,
+      pageview: true, //浏览统计
+      comment: true, //评论数统计
+      reaction: true, // 开启用户表达对文章内容反应
     });
   }
 }

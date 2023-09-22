@@ -7,7 +7,7 @@ const { frontmatter } = useData()
 </script>
 <style lang="sass">
 article
-  border-bottom: 1px solid rgba(0,0,0,.05)
+  border-bottom: 1px solid #eee
   padding-bottom: 20px 
   margin-bottom: 20px
 .title
@@ -17,7 +17,7 @@ article
     cursor: pointer
     transition: all .2s
     a
-        color: #000!important
+        color: #000
         font-weight: bold
 a:link
     text-decoration: none
@@ -26,14 +26,14 @@ a:hover
     color: #d05dd2!important   
 .description
     font-size: 14px
-    color: rgba(0,0,0,.54)
+    /* color: #888 */
     font-weight: 200   
     word-wrap: break-word
     text-overflow: ellipsis
     // overflow: hidden
     // display: -webkit-box
 .meta
-    color: rgba(0,0,0,.54)
+    /* color: rgba(0,0,0,.54) */
     font-weight: 200
     display: flex
     align-items: center    
