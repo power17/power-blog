@@ -6,7 +6,7 @@ const { frontmatter } = useData()
 
 </script>
 <style lang="sass">
-article
+.box
   border-bottom: 1px solid #eee
   padding-bottom: 20px 
   margin-bottom: 20px
@@ -44,7 +44,7 @@ a:hover
     height: 14px       
 </style>
 
-<article v-for="(item, index) in posts" :key="index">
+<article :class="{box: !!item.frontmatter?.title}" v-for="(item, index) in posts" :key="index">
 
   <div v-if="item.frontmatter?.title">
     <header class="title">
