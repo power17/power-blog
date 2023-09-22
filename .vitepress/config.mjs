@@ -1,20 +1,18 @@
 import { defineConfig } from 'vitepress'
 export default defineConfig((config) => {
-  let base = process.env.BUILD_TYPE === 'git' ? '/power-blog' : '/' 
+  let base = process.env.BUILD_TYPE === 'git' ? '/power-blog' : '' 
 
   return {
     title: "疯世权王",
     description: "记录技术的点点滴滴",
     head: [
       // 图标配置
-      ['link', { rel: 'icon',type:"image/x-icon", href: '/logo.svg' }],
+      ['link', { rel: 'icon',type:"image/x-icon", href: base + '/logo.svg' }],
    
     ],
     srcDir: 'src',
   
-    lastUpdated: {
-      text: '最后更新时间', 
-    },
+    lastUpdated: true,
     base: base,
     themeConfig: {
       // externalLinkIcon: true,
@@ -48,7 +46,7 @@ export default defineConfig((config) => {
         ],
         '/frontend/': [
           {
-            text: '前端',
+            text: '源码系列',
             items: [
               { text: 'vite源码', link: '/frontend/Vite' },
              
@@ -58,11 +56,11 @@ export default defineConfig((config) => {
             
           }
         ],  
-        '/database/': [
+        '/databases/': [
           {
             text: '数据库',
             items: [
-              { text: 'mysql操作', link: '/databases/Mysql' },
+              { text: 'mysql基本操作', link: '/databases/Mysql' },
              
             ]
           },
