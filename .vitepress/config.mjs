@@ -1,14 +1,14 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig((config) => {
-  let base = process.env.BUILD_TYPE === 'git' ? '/power-learn' : '/' 
+  let base = process.env.BUILD_TYPE === 'git' ? '/power-blog' : '/' 
 
   return {
     title: "疯世权王",
     description: "记录技术的点点滴滴",
     head: [
       // 图标配置
-      ['link', { rel: 'icon',type:"image/x-icon", href: '/assets/logo.svg' }],
+      ['link', { rel: 'icon',type:"image/x-icon", href: '/logo.svg' }],
       // [
       //   'script',
       //   {
@@ -19,13 +19,14 @@ export default defineConfig((config) => {
       // ],
     ],
     srcDir: 'src',
+  
     lastUpdated: {
       text: '最后更新时间', 
     },
     base: base,
     themeConfig: {
       // externalLinkIcon: true,
-      logo: '/assets/logo.png',
+      logo: '/logo.png',
       search: {
         provider: 'local'
       },
