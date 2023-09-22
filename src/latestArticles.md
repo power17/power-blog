@@ -26,7 +26,7 @@ a:hover
     color: #d05dd2!important   
 .description
     font-size: 14px
-    /* color: #888 */
+
     font-weight: 200   
     word-wrap: break-word
     text-overflow: ellipsis
