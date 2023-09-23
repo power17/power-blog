@@ -26,6 +26,7 @@ export default defineConfig((config) => {
         { text: '前端', link: '/frontend/Vite' },
         { text: '算法', link: '/algorithm/Array'},
         { text: '数据库', link: '/databases/Mysql'},
+        { text: 'mac', link: '/mac/macEvironment'},
        
       ],
        sidebar: {
@@ -61,6 +62,15 @@ export default defineConfig((config) => {
             text: '数据库',
             items: [
               { text: 'mysql基本操作', link: '/databases/Mysql' },
+             
+            ]
+          },
+        ],
+        '/mac/': [
+          {
+            text: 'mac配置',
+            items: [
+              { text: 'mac配置环境', link: '/mac/macEvironment' },
              
             ]
           },
