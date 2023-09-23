@@ -60,3 +60,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 
 source ~/.zshrc
 ```
+
+## npm link
+
+```sh
+cd vue // 进入本地clone下来的vue文件夹
+npm link // 如果没有全局安装过vue 此时会创建全局node_modules下的一个软链接vue指向本地clone的vue入口文件
+npm link vue // 在需要用调试vue模块的应用执行该命令会将当前应用的node_modules/vue指向全局node_modules/vue软链接
+```
