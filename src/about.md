@@ -1,4 +1,4 @@
-<h2>李仲永</h2>
+<h2>李仲谋</h2>
 <p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金溪民方仲永，世隶耕。仲永生五年，未尝识书具，忽啼求之。父异焉，
 
