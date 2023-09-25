@@ -12,13 +12,6 @@ tags:
 
 - {{$frontmatter.description}}
 
-  <pre class="mermaid">
-            graph TD 
-            A[Client] --> B[Load Balancer] 
-            B --> C[Server1] 
-            B --> D[Server2]
-    </pre>
-
 ### -时间对比
 
 - Webpack：启动时间 = 初始化模块加载 + 编译服务端/客户端 bundle 时间 + Midway
@@ -29,31 +22,6 @@ tags:
 - 1、vite 如何为开发提供开发环境的
 - 2、文件更改，vite 如何热更新
 - 3、vite 如何进行打包的
-
-## 目录
-
-```
-.
-├── CHANGELOG.md
-├── LICENSE.md
-├── README.md
-├── api-extractor.json
-├── bin # 指令目录
-├── client.d.ts
-├── dist
-├── index.cjs
-├── index.d.cts
-├── node_modules
-├── package.json
-├── rollup.config.ts
-├── rollupLicensePlugin.ts
-├── scripts
-├── src  #存放源码
-├── tsconfig.base.json
-├── tsconfig.check.json
-├── tsconfig.json
-└── types
-```
 
 # 配置调试环境
 
@@ -150,13 +118,102 @@ export function createWebSocketServer(server, config, httpsOptions) {
 }
 ```
 
-- 第二个问题，vite 如何实现热更新
+### 第二个问题，vite 如何实现热更新 HRM
 
-```
+- 通过 chokidar 库监听
+
+```js
 // chokidar监听文件变化
-  const watcher = watchEnabled
-        ? chokidar.watch(
-        // config file dependencies and env file might be outside of root
-        [root, ...config.configFileDependencies, config.envDir], resolvedWatchOptions)
-        : createNoopWatcher(resolvedWatchOptions);
+const watcher = watchEnabled
+  ? chokidar.watch(
+      // config file dependencies and env file might be outside of root
+      [root, ...config.configFileDependencies, config.envDir],
+      resolvedWatchOptions
+    )
+  : createNoopWatcher(resolvedWatchOptions);
+```
+
+- 通过 chokidar 库监听文件变化
+
+```js
+// chokidar监听文件变化
+const watcher = watchEnabled
+  ? chokidar.watch(
+      // config file dependencies and env file might be outside of root
+      [root, ...config.configFileDependencies, config.envDir],
+      resolvedWatchOptions
+    )
+  : createNoopWatcher(resolvedWatchOptions);
+```
+
+- 根据条件分别通过 fsEventsHandler 或者 nodeFsHandler 进行文件状态的监听, 分别是底层的 fs.watch 和 fs.watchFile 还有 mac 底层库 fsevents 来监听文件变化，通过 webSocket 推送给前端含路径信息
+
+```js
+// Initialize with proper watcher.
+if (opts.useFsEvents) {
+  this._fsEventsHandler = new FsEventsHandler(this);
+} else {
+  this._nodeFsHandler = new NodeFsHandler(this);
+}
+
+// 文件的增删改监听
+watcher.on('change', async (file) => {
+  file = normalizePath(file);
+  // invalidate module graph cache on file change
+  moduleGraph.onFileChange(file);
+  await onHMRUpdate(file, false);
+});
+watcher.on('add', onFileAddUnlink);
+watcher.on('unlink', onFileAddUnlink);
+
+// 利用socket推送更新内容
+config.logger.info(colors.green(`hmr update `) + colors.dim([...new Set(updates.map((u) => u.path))].join(', ')), {
+  clear: !afterInvalidation,
+  timestamp: true,
+});
+ws.send({
+  type: 'update',
+  updates,
+});
+```
+
+- 前端 header 插入@vite/client 脚本，通过监听 message 接收路径信息，vite 是把这个更新文件再请求一次。
+  至此，整个更新结束
+
+```js
+async function fetchUpdate({ path, acceptedPath, timestamp, explicitImportRequired }) {
+  const mod = hotModulesMap.get(path);
+  if (!mod) {
+    // In a code-splitting project,
+    // it is common that the hot-updating module is not loaded yet.
+    // https://github.com/vitejs/vite/issues/721
+    return;
+  }
+  let fetchedModule;
+  const isSelfUpdate = path === acceptedPath;
+  // determine the qualified callbacks before we re-import the modules
+  const qualifiedCallbacks = mod.callbacks.filter(({ deps }) => deps.includes(acceptedPath));
+  if (isSelfUpdate || qualifiedCallbacks.length > 0) {
+    const disposer = disposeMap.get(acceptedPath);
+    if (disposer) await disposer(dataMap.get(acceptedPath));
+    const [acceptedPathWithoutQuery, query] = acceptedPath.split(`?`);
+    try {
+      // 请求文件
+      fetchedModule = await import(
+        /* @vite-ignore */
+        base + acceptedPathWithoutQuery.slice(1) + `?${explicitImportRequired ? 'import&' : ''}t=${timestamp}${query ? `&${query}` : ''}`
+      );
+    } catch (e) {
+      warnFailedFetch(e, acceptedPath);
+    }
+  }
+  return () => {
+    for (const { deps, fn } of qualifiedCallbacks) {
+      // 更新
+      fn(deps.map((dep) => (dep === acceptedPath ? fetchedModule : undefined)));
+    }
+    const loggedPath = isSelfUpdate ? path : `${acceptedPath} via ${path}`;
+    console.debug(`[vite] hot updated: ${loggedPath}`);
+  };
+}
 ```
