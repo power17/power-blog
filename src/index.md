@@ -15,9 +15,9 @@ hero:
 
 features:
   - title: 前端
-    details: html、css、js、、
+    details: html、css、js、vue、react
   - title: 后端
-    details: java
+    details: node、java
   - title: 算法
     details: 介绍算法
 ---
