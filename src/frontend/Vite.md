@@ -2,7 +2,7 @@
 title: vite 源码解析（版本：5.0.0-beta.2）
 author: power
 description: 在 webpack 横行的时代，webpack 的影响力几乎统治了 web 前端，react，vue-cli 等等工具都借助于 webpack 构建。在使用过程中，Webpack 构建十几个页面几百个组件的应用的性能出现了严重下降，说句公道话，webpack 的性能其实是很好的，最大的问题是配置过于复杂，导致绝大多数人不能正确的配置导致性能下降。天下苦 webpack 久矣，在这个时候，尤大巧妙的利用 esbuild 和 rollup，借助浏览器原生的 esm 能力创造的 vite 横空出世。一旦体验过，就再也回不去了
-date: 2023-09-21 12:46:28
+date: 2023-09-26 09:25:00
 link: ./frontend/Vite
 tags:
   - 源码
@@ -25,36 +25,45 @@ tags:
 
 # 配置调试环境
 
-```sh
-# 创建
-npm init vue@3
-pnpm install
-pnpm dev
-```
+- 克隆 vite 源码
 
-- 克隆 vite 源码，添加 sourcemap，克隆 dist 文件到 node_modules 上
+```
+cd packages/vite
+pnpm i
+npm run dev
+cd playground/cli
+```
 
 - vscode 配置
 
 ```json
-{
-  "name": "debugger",
-  "request": "launch",
-  "runtimeArgs": ["run-script", "dev"],
-  "runtimeExecutable": "npm",
-  "console": "integratedTerminal", // 内部终端
-  "skipFiles": ["<node_internals>/**"],
-  "type": "node",
-  "cwd": "${workspaceFolder}",
-  "resolveSourceMapLocations": ["${workspaceFolder}/**"]
-}
+    {
+      "name": "playground",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "dev"],
+      "runtimeExecutable": "npm",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "cwd": "${workspaceFolder}/vite/playground/cli"
+    },
+    {
+      "name": "playground build",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "build"],
+      "runtimeExecutable": "npm",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "cwd": "${workspaceFolder}/vite/playground/cli"
+    }
 ```
 
 # 开始
 
 1、第一个问题
 
-- 简单来说通过 http 和 ws 库启动 http 和 socket 服务
+- 简单来说通过 nodejs 的 http 和 ws 库启动 http 和 socket 服务
 
 ```js
 export async function _createServer(inlineConfig = {}, options) {
@@ -216,4 +225,41 @@ async function fetchUpdate({ path, acceptedPath, timestamp, explicitImportRequir
     console.debug(`[vite] hot updated: ${loggedPath}`);
   };
 }
+```
+
+# 第三个问题：vite 如何打包构建
+
+- 很简单，使用 rollup 打包，借助 rollup 生态
+
+```js
+      const { watch } = await import('rollup')
+      const watcher = watch({
+        ...rollupOptions,
+        output: normalizedOutputs,
+        watch: {
+          ...config.build.watch,
+          chokidar: resolvedChokidarOptions,
+        },
+      })
+
+      watcher.on('event', (event) => {
+        if (event.code === 'BUNDLE_START') {
+          config.logger.info(colors.cyan(`\nbuild started...`))
+          if (options.write) {
+            prepareOutDir(outDirs, options.emptyOutDir, config)
+          }
+        } else if (event.code === 'BUNDLE_END') {
+          event.result.close()
+          config.logger.info(colors.cyan(`built in ${event.duration}ms.`))
+        } else if (event.code === 'ERROR') {
+          outputBuildError(event.error)
+        }
+      })
+
+      return watcher
+    }
+
+    // write or generate files with rollup
+    const { rollup } = await import('rollup')
+    bundle = await rollup(rollupOptions)
 ```

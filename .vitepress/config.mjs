@@ -24,9 +24,10 @@ export default defineConfig((config) => {
         
         { text: '首页', link: '/' },
         { text: '前端', link: '/frontend/Vite' },
+        { text: '后端', link: '/backend/node' },
         { text: '算法', link: '/algorithm/Array'},
         { text: '数据库', link: '/databases/Mysql'},
-        { text: 'mac', link: '/mac/macEvironment'},
+        { text: 'mac vscode', link: '/mac/macEvironment'},
        
       ],
        sidebar: {
@@ -51,6 +52,18 @@ export default defineConfig((config) => {
             items: [
               { text: 'vite源码', link: '/frontend/Vite' },
              
+            ]
+          },
+          {
+            
+          }
+        ], 
+        '/backend/': [
+          {
+            text: 'node系列',
+            items: [
+              { text: '开发node应用', link: '/backend/Node' },
+              { text: 'Nest精髓', link: '/backend/Nest' },
             ]
           },
           {
