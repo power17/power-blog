@@ -28,6 +28,7 @@ export default defineConfig((config) => {
         { text: '算法', link: '/algorithm/Array'},
         { text: '数据库', link: '/databases/Mysql'},
         { text: 'mac vscode', link: '/mac/macEvironment'},
+        { text: '工程化', link: './engineering/Git.md'},
        
       ],
        sidebar: {
@@ -75,6 +76,15 @@ export default defineConfig((config) => {
             text: '数据库',
             items: [
               { text: 'mysql基本操作', link: '/databases/Mysql' },
+             
+            ]
+          },
+         ],
+          '/engineering/': [
+          {
+            text: '工程化',
+            items: [
+              { text: 'git基本操作', link: './engineering/Git.md' },
              
             ]
           },

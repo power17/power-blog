@@ -123,3 +123,5 @@ node --inspect-brk index.js
 - @Header：修改响应头
 - @Redirect：指定重定向的 url
 - @Render：指定渲染用的模版引擎
+
+## ngix 配置：nginxconfig.io
