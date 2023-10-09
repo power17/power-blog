@@ -1,18 +1,18 @@
 ---
 title: vscode调试
 author: power
-description: 'vscode调试'
+description: '记录vscode配置'
 date: 2023-09-27 08:38:28
 link: ./mac/VscodeDebugger
 tags:
   - mac
 ---
 
-; # {{$frontmatter.title}}
+# {{$frontmatter.title}}
 
-; - {{$frontmatter.description}}
+- {{$frontmatter.description}}
 
-- 调试 nest
+# 调试 nest
 
 ```js
 "configurations": [

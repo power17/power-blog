@@ -8,9 +8,9 @@ tags:
   - mac
 ---
 
-; # {{$frontmatter.title}}
+# {{$frontmatter.title}}
 
-; - {{$frontmatter.description}}
+- {{$frontmatter.description}}
 
 ## tree
 

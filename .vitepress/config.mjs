@@ -52,6 +52,8 @@ export default defineConfig((config) => {
             text: '源码系列',
             items: [
               { text: 'vite源码', link: '/frontend/Vite' },
+              { text: '前端工程化之路', link: '/frontend/Engineering' },
+              
              
             ]
           },
@@ -94,6 +96,9 @@ export default defineConfig((config) => {
             text: 'mac配置',
             items: [
               { text: 'mac配置环境', link: '/mac/macEvironment' },
+              { text: 'VscodeDebugger', link: '/mac/VscodeDebugger' },
+              { text: 'linux命令', link: '/mac/linuxCommand' },
+              { text: '收藏夹', link: '/mac/Favorites' },
              
             ]
           },

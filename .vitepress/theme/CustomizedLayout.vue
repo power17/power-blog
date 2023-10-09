@@ -44,4 +44,29 @@ async function initWaline() {
       <div id="waline"></div>
     </template>
   </Layout>
+  <footer class="footer">
+    <div>
+      <p>
+        Copyright © 2023 ICP证号：<a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow noopener noreferrer"
+          >粤ICP备2023089812号</a
+        >
+      </p>
+    </div>
+  </footer>
 </template>
+<style lang="scss">
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d3236;
+  z-index: 9999;
+  height: 50px;
+  position: absolute;
+  p {
+    color: #ccc;
+    opacity: 0.8;
+  }
+}
+</style>
