@@ -30,6 +30,7 @@ export default defineConfig((config) => {
         { text: '工程化', link: './engineering/Git.md' },
         { text: 'mac', link: '/mac/macEvironment'},
         { text: 'window', link: '/window/Command.md'},
+        { text: '书籍推荐', link: '/book/Recommend.md'},
        
       ],
        sidebar: {
@@ -101,6 +102,17 @@ export default defineConfig((config) => {
               { text: 'VscodeDebugger', link: '/mac/VscodeDebugger' },
               { text: 'linux命令', link: '/mac/linuxCommand' },
               { text: '收藏夹', link: '/mac/Favorites' },
+             
+            ]
+          },
+         ],
+        // book/Recommend.md
+         '/book/': [
+            {
+            text: '书籍推荐',
+            items: [
+              { text: '计算机', link: '/book/Recommend' },
+             
              
             ]
           },
