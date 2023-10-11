@@ -27,8 +27,9 @@ export default defineConfig((config) => {
         { text: '后端', link: '/backend/node' },
         { text: '算法', link: '/algorithm/Array'},
         { text: '数据库', link: '/databases/Mysql'},
-        { text: 'mac vscode', link: '/mac/macEvironment'},
-        { text: '工程化', link: './engineering/Git.md'},
+        { text: '工程化', link: './engineering/Git.md' },
+        { text: 'mac', link: '/mac/macEvironment'},
+        { text: 'window', link: '/window/Command.md'},
        
       ],
        sidebar: {
@@ -52,6 +53,7 @@ export default defineConfig((config) => {
             text: '源码系列',
             items: [
               { text: 'vite源码', link: '/frontend/Vite' },
+              { text: 'vite插件', link: '/frontend/VitePlugin' },
               { text: '前端工程化之路', link: '/frontend/Engineering' },
               
              
