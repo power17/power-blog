@@ -12,6 +12,10 @@ tags:
 
 - {{$frontmatter.description}}
 
+# 计算机体系（重要）
+
+- [北大计算机自学指南]（https://csdiy.wiki）
+
 ## 博客
 
 - 哈工大深圳校区的计算机本科生[Clouder Blog](https://www.codein.icu/about/)

@@ -101,7 +101,6 @@ export default defineConfig((config) => {
               { text: 'mac配置环境', link: '/mac/macEvironment' },
               { text: 'VscodeDebugger', link: '/mac/VscodeDebugger' },
               { text: 'linux命令', link: '/mac/linuxCommand' },
-              { text: '收藏夹', link: '/mac/Favorites' },
              
             ]
           },
@@ -112,6 +111,7 @@ export default defineConfig((config) => {
             text: '书籍推荐',
             items: [
               { text: '计算机', link: '/book/Recommend' },
+              { text: '收藏夹', link: '/book/favorites' },
              
              
             ]
