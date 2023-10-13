@@ -111,7 +111,7 @@ export default defineConfig((config) => {
             text: '书籍推荐',
             items: [
               { text: '计算机', link: '/book/Recommend' },
-              { text: '收藏夹', link: '/book/favorites' },
+              { text: '收藏夹', link: '/book/Favorites' },
              
              
             ]
