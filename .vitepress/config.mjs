@@ -31,6 +31,7 @@ export default defineConfig((config) => {
         { text: 'mac', link: '/mac/macEvironment'},
         { text: 'window', link: '/window/Command.md'},
         { text: '书籍推荐', link: '/book/Recommend.md'},
+        { text: '问题（坑）', link: '/pit/Problem.md'},
        
       ],
        sidebar: {
@@ -112,6 +113,18 @@ export default defineConfig((config) => {
             items: [
               { text: '计算机', link: '/book/Recommend' },
               { text: '收藏夹', link: '/book/Favorites' },
+             
+             
+            ]
+          },
+         ],
+            '/pit/': [
+            {
+            text: '问题记录',
+            items: [
+              { text: 'window', link: '/pit/Problem' },
+              { text: '前端', link: '/pit/Frontend' },
+      
              
              
             ]
