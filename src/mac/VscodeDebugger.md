@@ -27,3 +27,15 @@ tags:
     }
   ]
 ```
+
+# 调试 网页
+
+```js
+ {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+}
+```
