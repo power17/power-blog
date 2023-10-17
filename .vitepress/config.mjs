@@ -27,7 +27,7 @@ export default defineConfig((config) => {
         { text: '后端', link: '/backend/node' },
         { text: '算法', link: '/algorithm/Array'},
         { text: '数据库', link: '/databases/Mysql'},
-        { text: '工程化', link: './engineering/Git.md' },
+        { text: '工程', link: '/engineering/Git' },
         { text: 'mac', link: '/mac/macEvironment'},
         { text: 'window', link: '/window/Command.md'},
         { text: '书籍推荐', link: '/book/Recommend.md'},
@@ -88,10 +88,11 @@ export default defineConfig((config) => {
          ],
           '/engineering/': [
           {
-            text: '工程化',
+            text: '工程',
             items: [
-              { text: 'git基本操作', link: './engineering/Git.md' },
-             
+              { text: 'git基本操作', link: '/engineering/Git.md' },
+              { text: 'esbuild基本使用', link: '/engineering/esbuild' },
+              
             ]
           },
         ],
