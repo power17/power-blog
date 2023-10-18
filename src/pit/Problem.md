@@ -19,3 +19,12 @@ npm config set proxy=http://127.0.0.1:1126
 npm config set https-proxy http://127.0.0.1:1126
 
 ```
+
+# npm 更换淘宝源
+
+- tip：新的 Web 站点：https://npmmirror.com，Registry Endpoint：https://registry.npmmirror.com。 http://npm.taobao.org 和 http://registry.npm.taobao.org 将在 2022.06.30 号正式下线和停止 DNS 解析。
+
+```sh
+npm config set registry https://registry.npmmirror.com
+
+```
