@@ -92,6 +92,7 @@ export default defineConfig((config) => {
             items: [
               { text: 'git基本操作', link: '/engineering/Git.md' },
               { text: 'esbuild基本使用', link: '/engineering/esbuild' },
+              { text: 'webpack基本使用', link: '/engineering/Webpack' },  
               
             ]
           },
