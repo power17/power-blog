@@ -108,6 +108,16 @@ export default defineConfig((config) => {
             ]
           },
          ],
+         '/window/': [
+          {
+            text: 'window系统命令行',
+            items: [
+              { text: 'window', link: '/window/Command' },
+             
+             
+            ]
+          },
+         ],
         // book/Recommend.md
          '/book/': [
             {
