@@ -92,7 +92,9 @@ export default defineConfig((config) => {
             items: [
               { text: 'git基本操作', link: '/engineering/Git.md' },
               { text: 'esbuild基本使用', link: '/engineering/esbuild' },
+
               { text: 'rollup使用', link: '/engineering/rollup' },
+              { text: 'webpack基本使用', link: '/engineering/Webpack' },  
               
             ]
           },
@@ -104,6 +106,16 @@ export default defineConfig((config) => {
               { text: 'mac配置环境', link: '/mac/macEvironment' },
               { text: 'VscodeDebugger', link: '/mac/VscodeDebugger' },
               { text: 'linux命令', link: '/mac/linuxCommand' },
+             
+            ]
+          },
+         ],
+         '/window/': [
+          {
+            text: 'window系统命令行',
+            items: [
+              { text: 'window', link: '/window/Command' },
+             
              
             ]
           },
