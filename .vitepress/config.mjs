@@ -91,6 +91,8 @@ export default defineConfig((config) => {
             items: [
               { text: 'git基本操作', link: '/engineering/Git.md' },
               { text: 'esbuild基本使用', link: '/engineering/esbuild' },
+
+              { text: 'rollup使用', link: '/engineering/rollup' },
               { text: 'webpack基本使用', link: '/engineering/Webpack' },  
               { text: 'vite基本使用', link: '/engineering/Engineering' },
               { text: 'vite插件', link: '/engineering/VitePlugin' },
