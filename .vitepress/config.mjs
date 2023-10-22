@@ -55,8 +55,7 @@ export default defineConfig((config) => {
             text: '源码系列',
             items: [
               { text: 'vite源码', link: '/frontend/Vite' },
-              { text: 'vite插件', link: '/frontend/VitePlugin' },
-              { text: '前端工程化之路', link: '/frontend/Engineering' },
+           
               
              
             ]
@@ -95,6 +94,9 @@ export default defineConfig((config) => {
 
               { text: 'rollup使用', link: '/engineering/rollup' },
               { text: 'webpack基本使用', link: '/engineering/Webpack' },  
+              { text: 'vite基本使用', link: '/engineering/Engineering' },
+              { text: 'vite插件', link: '/engineering/VitePlugin' },
+          
               
             ]
           },
@@ -112,9 +114,9 @@ export default defineConfig((config) => {
          ],
          '/window/': [
           {
-            text: 'window系统命令行',
+            text: 'window系统',
             items: [
-              { text: 'window', link: '/window/Command' },
+              { text: 'window命令行', link: '/window/Command' },
              
              
             ]
