@@ -39,3 +39,60 @@ tags:
       "webRoot": "${workspaceFolder}"
 }
 ```
+
+# vscode 插件
+
+- YAML
+- vue.js Extension Pack
+- Vue vscode snippets
+- vue 3 snippets
+- vscode-styled-components
+- vite
+- vite Runner
+- typescript toolbox
+- typescript importer
+- typescript Extension Pack
+- typescript debugger
+- turbo console.log
+- stylelint
+- scss intellisense
+- scss formatter
+- scss everywhere
+- sass
+- prettierConfig for vscode
+- prettier-code formatter
+- path intellisense
+- paste json as code
+- node.js exec
+- node.js Modules intellisense
+- npm intellisense
+- move Ts
+- material icon theme
+- live server
+- licenser
+- json2ts
+- js jsx snippets
+- javascript booster
+- intellisense for css class name
+- intellicode
+- insert data string
+- ignore files
+- html css support
+- gitignore
+- formatting toggle
+- eslint
+- dotenv
+- darcula theme
+- commit tagger
+- codeium
+- cmake tools
+- cmake
+- choose alicense
+- better comments
+- babel javascript
+- auto rename tag
+- auto import
+- auto complete tag
+- auto close tag
+- volar
+- code runner
