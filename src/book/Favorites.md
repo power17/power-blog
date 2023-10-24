@@ -15,6 +15,7 @@ tags:
 # 计算机体系（重要）
 
 - [北大计算机自学指南]（https://csdiy.wiki）
+- [南京大学 Pa](https://nju-projectn.github.io/ics-pa-gitbook/ics2023/)
 
 ## 博客
 
