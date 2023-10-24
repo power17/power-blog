@@ -32,6 +32,7 @@ tags:
 - copy-webpack-plugin: 有一些本地资源，例如图片和音视频，在打包过程中没有任何模块使用到它们，但我们却想要把它们放在打包后的资源输出目录。
 - webpack-merge: 配置项合并
 - DefinePlugin(自带):
+- progressPlugin(自带)：进度
 
 # webpack 开发环境
 
