@@ -16,8 +16,10 @@ hero:
 features:
   - title: 前端
     details: html、css、js、vue、react
-  - title: 后端
-    details: node、java
   - title: 算法
-    details: 介绍算法
+    details: node、java
+  - title: 英文
+    details: 学习语法
+  - title: 工程
+    details: vite、webpack、rollup、esbuild
 ---

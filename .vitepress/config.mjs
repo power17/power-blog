@@ -30,7 +30,7 @@ export default defineConfig((config) => {
         { text: '工程', link: '/engineering/Git' },
         { text: 'mac', link: '/mac/macEvironment'},
         { text: 'window', link: '/window/Command.md'},
-        { text: '书籍推荐', link: '/book/Recommend.md'},
+        { text: '收藏', link: '/book/Recommend.md'},
         { text: '问题（坑）', link: '/pit/Problem.md'},
        
       ],
