@@ -16,6 +16,7 @@ tags:
 
 - [北大计算机自学指南]（https://csdiy.wiki）
 - [南京大学 Pa](https://nju-projectn.github.io/ics-pa-gitbook/ics2023/)
+- [How to be a Programmer](https://braydie.gitbooks.io/how-to-be-a-programmer/content/zh/)
 
 ## 博客
 
@@ -29,4 +30,3 @@ tags:
 # 文档
 
 - [nest 中文文档](https://juejin.cn/post/7293176193322237990)
-- test
