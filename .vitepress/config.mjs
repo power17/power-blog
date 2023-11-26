@@ -128,8 +128,8 @@ export default defineConfig((config) => {
             text: '书籍推荐',
             items: [
               { text: '计算机', link: '/book/Recommend' },
-              { text: '收藏夹', link: '/book/Favorites' },
-             
+              { text: '收藏夹', link: '/book/Favorites' },            
+              { text: '谷歌搜索技术', link: '/book/Search' },            
              
             ]
           },
