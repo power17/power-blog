@@ -23,7 +23,7 @@ export default defineConfig((config) => {
       nav: [
         
         { text: '首页', link: '/' },
-        { text: '前端', link: '/frontend/Vite' },
+        { text: '前端', link: '/frontend/Vscode' },
         { text: '后端', link: '/backend/node' },
         { text: '算法', link: '/algorithm/Array'},
         { text: '数据库', link: '/databases/Mysql'},
@@ -54,14 +54,14 @@ export default defineConfig((config) => {
           {
             text: '源码系列',
             items: [
-              { text: 'vite源码', link: '/frontend/Vite' },
-           
-              
-             
+              { text: 'vscode调试', link: '/frontend/Vscode' },
             ]
           },
           {
-            
+            text: 'css',
+            items: [
+              { text: '重学css', link: '/frontend/Css' },
+            ]
           }
         ], 
         '/backend/': [
