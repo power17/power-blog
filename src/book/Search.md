@@ -24,3 +24,17 @@ tags:
 - [pexels] (https://www.pexels.com/zh-cn/)
 - [videvo] (https://www.videvo.net/)
 - [mixkit] (https://mixkit.co/)
+- [pixabay] (https://pixabay.com/music/)
+
+# 有版权
+
+- [gettyimages] (https://www.gettyimages.hk/)
+- [下载器](https://steptodown.com/getty-images-downloader/get.php)
+
+# 下载 youtube 视频：加 '9x'
+
+# 寻找 gif 图片，谷歌搜索 gif
+
+# ppt 设计
+
+[canva] (https://www.canva.cn/)
