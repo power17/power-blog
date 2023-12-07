@@ -45,3 +45,31 @@ tags:
 - css 规则：（a,b,c）id:a, 伪类，class：b，伪元素和标签：c
 - 行内属性永远高于 css 规则
 - !important 优先级高于行内属性
+
+### 2、3 排版
+
+1. 正常流排版(文字排版需求): block inline inline-block
+
+- inline：text-align， line-hight, vertical-align
+- block: white-space, float, positon
+- inline-block
+
+2. 弹性布局
+3. 网格布局
+
+### 3、css 强大的属性
+
+1. background
+
+```css
+/* - 直线: */
+background: linear-gradient;
+/* - 直径: */
+background: radial-gradient;
+/* - 角度: */
+background: conic-gradient(#fff, #000);
+/* 透明色： */
+background: linear-gradient(90deg, #000, transparent);
+/* 三角形： */
+background: linear-gradient(45deg, #f00 0%, #f00 50%, transparent 50%, transparent 100%);
+```
