@@ -1,7 +1,7 @@
 ---
-title: hellos系统启动初始化
+title: helloOS系统启动初始化
 author: power
-description: 'ubuntu22安装'
+description: '跟着极客时间的操作系统45讲写操作系统OS'
 date: 2024-03-09 12:29:08
 link: ./blog/System
 tags:
