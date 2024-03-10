@@ -12,8 +12,8 @@ tags:
 
 - {{$frontmatter.description}}
 
-- [参考链接](https://blog.csdn.net/weixin_70137390/article/details/124724957)
-- [操作系统 45 将](https://time.geekbang.org/column/article/379291)
+- [ubuntu 安装参考链接](https://blog.csdn.net/weixin_70137390/article/details/124724957)
+- [操作系统 45 讲](https://time.geekbang.org/column/article/379291)
 
 ## 一、linux 系统的安装
 
@@ -114,3 +114,5 @@ VBoxManage startvm HelloOS  #启动虚拟机
 ![出现 GRUB 引导菜单](image-1.png)
 错误显示，GRUB 没有找到 HelloOS.eki 文件，这是因为我们从来没有向虚拟硬盘中放入 HelloOS.eki 文件，所以才会失败
 ![上面的错误显示，GRUB 没有找到 HelloOS.eki 文件，这是因为我们从来没有向虚拟硬盘中放入 HelloOS.eki 文件，所以才会失败](image-2.png)
+
+# 三、建立二级引导器

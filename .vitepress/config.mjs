@@ -59,7 +59,7 @@ export default defineConfig((config) => {
         '/blog/': [
           {
             text: '计算级',
-            items: [{ text: 'linux-ubunt22安装', link: '/blog/System' }],
+            items: [{ text: 'helloOS系统启动初始化', link: '/blog/System' }],
           },
         ],
         '/backend/': [
