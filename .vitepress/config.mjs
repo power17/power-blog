@@ -116,6 +116,7 @@ export default defineConfig((config) => {
               { text: '计算机', link: '/book/Recommend' },
               { text: '收藏夹', link: '/book/Favorites' },
               { text: '谷歌搜索技术', link: '/book/Search' },
+              { text: 'Dns泄漏配置', link: '/book/DnsLeak' },
             ],
           },
         ],
