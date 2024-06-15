@@ -3,12 +3,13 @@ title: 防止dns泄漏配置
 author: power
 description: ..
 date: 2024-06-13 23:27:43
-link: ./book/DnsLeak.md
+link: ./book/DnsLeak
 tags:
   - 代理
 ---
 
 ```sh
+# https://cf.buliang0.cf/clash-rules/nodnsleak.ini
 [custom]
 ;解决DNS泄露，无分流群组
 ruleset=🚀 节点选择,[]DOMAIN-SUFFIX,xn--ngstr-lra8j.com
