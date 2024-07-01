@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress';
-import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 export default defineConfig((config) => {
   let base = process.env.BUILD_TYPE === 'git' ? '/power-blog' : '';
 
