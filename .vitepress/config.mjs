@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 export default defineConfig((config) => {
   let base = process.env.BUILD_TYPE === 'git' ? '/power-blog' : '';
 
@@ -21,9 +22,25 @@ export default defineConfig((config) => {
       },
       nav: [
         { text: '首页', link: '/' },
-        { text: '博文', link: '/blog/System.md' },
-        { text: '前端', link: '/frontend/Vscode' },
-        { text: '后端', link: '/backend/node' },
+        {
+          text: '随记',
+          items: [
+            {
+              text: '博文',
+              link: '/blog/System.md',
+            },
+          ],
+        },
+        {
+          text: '前端',
+          items: [
+            {
+              text: 'web',
+              link: '/frontend/Vscode',
+            },
+          ],
+        },
+        { text: '后端', items: [{ text: 'node', link: '/backend/Node' }] },
         { text: '算法', link: '/algorithm/Array' },
         { text: '数据库', link: '/databases/Mysql' },
         { text: '工程', link: '/engineering/Git' },
@@ -33,6 +50,12 @@ export default defineConfig((config) => {
         { text: '问题（坑）', link: '/pit/Problem.md' },
       ],
       sidebar: {
+        '/blog/': [
+          {
+            text: '计算级',
+            items: [{ text: 'helloOS系统启动初始化', link: '/blog/System' }],
+          },
+        ],
         '/algorithm/': [
           {
             text: '数据结构',
@@ -54,12 +77,6 @@ export default defineConfig((config) => {
           {
             text: 'css',
             items: [{ text: '重学css', link: '/frontend/Css' }],
-          },
-        ],
-        '/blog/': [
-          {
-            text: '计算级',
-            items: [{ text: 'helloOS系统启动初始化', link: '/blog/System' }],
           },
         ],
         '/backend/': [
